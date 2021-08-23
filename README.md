@@ -116,7 +116,9 @@ export default Button
 
 Final `Button` component:
 
-<img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-component.png" style="height:260px;"alt="button-component"/>
+<div>
+    <img src='https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-component.png' style="height:260px;"alt="button-component"/>
+</div>
 
 ### Utilizing Our Component
 
