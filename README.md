@@ -122,6 +122,69 @@ Final `Button` component:
 
 ### Utilizing Our Component
 
+Now that we've successfully created a `Button` component, let's display it in our UI!
+
+Open the `App.js` file. Add an `import` statement to the top, this `import` statement is going to handle bringing in our `Button` component:
+
+```js
+import Button from './components/Button'
+```
+
+**Note: You do not need to use file extensions for `.js` and `.jsx` files in React when importing!**
+
+Next we'll add our `Button` to the current markup in `App.js`:
+
+```jsx
+function App() {
+  return (
+    <div>
+      <Button />
+    </div>
+  )
+}
+```
+
+**Note: Notice the use of `()` in the return statement! This syntax is used when returning multiple elements from a component! Also, notice how we do not use an opening and closing tag for the component itself. The reason for this is because this component is not set up to use `children`. We'll talk more about this when we learn about component props**.
+
+At this point, check your browser and you should see the following button:
+
+![button-element](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-element.png)
+
+### Reusing Components
+
+At this point, we should have a beautiful button displayed on our page. What if we wanted multiple buttons? With React, this is pretty straightforward. We can simply add more of the `Button` component to our markup!
+
+Add the following to the `App.js`:
+
+```jsx
+function App() {
+  return (
+    <div>
+      <Button />
+      <Button />
+      <Button />
+      <Button />
+    </div>
+  )
+}
+```
+
+We should now see `4` buttons on our page:
+
+![multiple-buttons](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/multiple-buttons.png)
+
+## Recap
+
+In this lesson, we learned how to:
+
+- Create a component
+- How a component is structured
+- How to import a component
+- How to use a component multiple times
+
+Components are crucial building blocks in React. They allow us to build amazing UI's by reusing most of our code. Gone are the days of writing a button over and over again. By using React, we can create one component and utilize it multiple times. Our current button although simple, is a critical foundation going forward.
+
 ## Resources
 
+- [React Components](https://reactjs.org/docs/components-and-props.html)
 - [Understanding React Components](https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb)

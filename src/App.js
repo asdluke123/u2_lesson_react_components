@@ -5,12 +5,3 @@ function App() {
 }
 
 export default App
-
-function ComponentName() {
-  const method1 = () => {}
-  const method2 = () => {}
-
-  return <div></div>
-}
-
-export default ComponentName
