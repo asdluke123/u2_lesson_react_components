@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# React Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://bs-uploads.toptal.io/blackfish-uploads/blog/article/content/cover_image_file/cover_image/16967/cover-0322-how-react-components-make-ui-testing-easy-Waldek_Newsletter-b1f3c0ca0ff823b504d7c8fa84a3b6c2.png)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+In this lesson, we'll learn about the fundamentals of building and utilizing components in React. By utilizing what's known as components, we can easily break up our UI into modular pieces of code that we can reuse in multiple places.
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Fork and Clone
+- `npm install`
+- `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## What Are React Components?
 
-### `yarn test`
+By [John Kagga](https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Components are the building blocks of any React app and a typical React app will have many of these. Simply put, a component is a JavaScript class or function that optionally accepts inputs i.e. properties(props) and returns a React element that describes how a section of the UI (User Interface) should appear.
 
-### `yarn build`
+From [Educative.io](https://www.educative.io/edpresso/what-is-a-react-component):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> React components let you break up the user interface into separate pieces that can then be reused and handled independently.
+> A React component takes an optional input and returns a React element which is rendered on the screen.
+> A React component can be either “stateful” or "stateless."
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In summary, a React component is a function or class that can recieve or handle some kind of information (props/state) and give us back an interactive element in the DOM.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+During our first lesson with React, we utilized the React library to create a simple button that incremented some kind of counter. In that lesson we saw two ways of writing a component:
 
-### `yarn eject`
+- `class` based components
+- `function` based components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Class Components
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Class components are an older method of writing components. Although we won't be using them during this course, they are important to familiarize yourself with.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Pros
 
-## Learn More
+- declarative and strict syntax
+- individual methods to control the behavior of the component
+- one method used to control state
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Cons
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- tons boiler plate code in order to get set up
+- many methods that are all used for one thing
 
-### Code Splitting
+### Function Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+Function components were always a popular way of writing of writing components and typically used to build UI elements that were controlled by a class component. With the release of React hooks, we are now able to write all of our components using only the function syntax and manage some kind of state at the same time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Pros
 
-### Making a Progressive Web App
+- easier to set up
+- less boilerplate code
+- no more confusion on which component should handle logic (for newer developers)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Cons
 
-### Advanced Configuration
+- most methods now perform more than one thing to control our components behavior
+- looser syntax can lead to more bugs
+- can cause confusion when writing other functions inside of the component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Writing Our First Component
 
-### Deployment
+Now that we've talked about different kinds of components, it's time to actually write one!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Throughtout this course, we'll be using function based components. Lets start with a basic skeleton of what a function based component would look like:
 
-### `yarn build` fails to minify
+![component-structure](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/component-structure.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In your code editor, let's create a folder called `components` inside of the `src` folder. **All of the code you write will always go in the `src` folder.**
+
+Inside of the `components` folder, create a file called `Button.js`.
+
+**Pay special attention to the casing of the file name, all component files will use the `PascalCased` convention.**
+
+**Some developers prefer to use the `.jsx` extension for component files as it can give better syntax highlighting and fancy file icons. `.js` and `.jsx` are interpreted the same in a React project. When in doubt consult your employes style guide on which to use.**
+
+In the `Button.js` file, let's start by importing the react library like so:
+
+```js
+import React from 'react'
+```
+
+The `import` syntax uses the following structure:
+
+![import-structure](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/import-structure.png)
+
+**Note: This syntax is only used for component files or libraries such as `React`. When importing stylesheets you do not need a variable name**.
+
+Next we'll set up the function for our component. Add the following to `Button.js`:
+
+```js
+function Button() {}
+```
+
+Next, we'll return a `button` element from our `Button` component:
+
+```jsx
+function Button() {
+  return <button>Click Me</button>
+}
+```
+
+And last step! In order to utilize this component somewhere else in our application, we need to `export` it:
+
+```js
+export default Button
+```
+
+Final `Button` component:
+
+<img src="https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-component.png" style="height:260px;"alt="button-component"/>
+
+### Utilizing Our Component
+
+## Resources
+
+- [Understanding React Components](https://medium.com/the-andela-way/understanding-react-components-37f841c1f3bb)
