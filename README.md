@@ -82,11 +82,6 @@ Inside of the `components` folder, create a file called `Button.js`.
 
 **Some developers prefer to use the `.jsx` extension for component files as it can give better syntax highlighting and fancy file icons. `.js` and `.jsx` are interpreted the same in a React project. When in doubt consult your employes style guide on which to use.**
 
-In the `Button.js` file, let's start by importing the react library like so:
-
-```js
-import React from 'react'
-```
 
 The `import` syntax uses the following structure:
 
