@@ -142,7 +142,7 @@ function App() {
 
 At this point, check your browser and you should see the following button:
 
-![button-element](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-element.png)
+![button-element](images/button-element.png)
 
 ### Reusing Components
 
@@ -165,7 +165,7 @@ function App() {
 
 We should now see `4` buttons on our page:
 
-![multiple-buttons](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/multiple-buttons.png)
+![multiple-buttons](images/multiple-buttons.png)
 
 ## Recap
 
