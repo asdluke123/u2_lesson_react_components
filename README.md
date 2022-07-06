@@ -85,7 +85,7 @@ Inside of the `components` folder, create a file called `Button.js`.
 
 The `import` syntax uses the following structure:
 
-![import-structure](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/import-structure.png)
+![import-structure](images/import-structure.png)
 
 **Note: This syntax is only used for component files or libraries such as `React`. When importing stylesheets you do not need a variable name**.
 
@@ -111,9 +111,8 @@ export default Button
 
 Final `Button` component:
 
-<div>
-    <img src='https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-component.png' style="height:260px;"alt="button-component"/>
-</div>
+![import-structure](images/button-component.png)
+
 
 ### Utilizing Our Component
 
