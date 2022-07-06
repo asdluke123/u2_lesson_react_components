@@ -72,7 +72,7 @@ Now that we've talked about different kinds of components, it's time to actually
 
 Throughtout this course, we'll be using function based components. Lets start with a basic skeleton of what a function based component would look like:
 
-![component-structure](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/component-structure.png)
+![component-structure](images/component-structure.png)
 
 In your code editor, let's create a folder called `components` inside of the `src` folder. **All of the code you write will always go in the `src` folder.**
 
