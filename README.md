@@ -8,9 +8,10 @@ In this lesson, we'll learn about the fundamentals of building and utilizing com
 
 ## Getting Started
 
-- Fork and Clone
-- `npm install`
-- `npm start`
+- `Fork` and `Clone` the repository
+- `cd` into our newly created directory
+- `npm install` to install our dependencies
+- `npm start` to spin up our app
 
 ## What Are React Components?
 
@@ -72,7 +73,14 @@ Now that we've talked about different kinds of components, it's time to actually
 
 Throughtout this course, we'll be using function based components. Lets start with a basic skeleton of what a function based component would look like:
 
-![component-structure](images/component-structure.png)
+```jsx
+const App = () => {
+
+  return (
+    <div></div>
+  )
+}
+```
 
 In your code editor, let's create a folder called `components` inside of the `src` folder. **All of the code you write will always go in the `src` folder.**
 
@@ -85,21 +93,26 @@ Inside of the `components` folder, create a file called `Button.js`.
 
 The `import` syntax uses the following structure:
 
-![import-structure](images/import-structure.png)
+```jsx
+import NameForComponent from '../components/FileOfComponent'
+```
 
 **Note: This syntax is only used for component files or libraries such as `React`. When importing stylesheets you do not need a variable name**.
 
 Next we'll set up the function for our component. Add the following to `Button.js`:
 
 ```js
-function Button() {}
+const Button = () => {}
 ```
 
 Next, we'll return a `button` element from our `Button` component:
 
 ```jsx
-function Button() {
-  return <button>Click Me</button>
+const Button = () => {
+
+  return (
+    <button>Click Me</button>
+  )
 }
 ```
 
@@ -111,7 +124,16 @@ export default Button
 
 Final `Button` component:
 
-![import-structure](images/button-component.png)
+```jsx
+const Button = () => {
+
+  return (
+    <button>Click Me</button>
+  )
+}
+
+export default Button
+```
 
 
 ### Utilizing Our Component
@@ -129,7 +151,8 @@ import Button from './components/Button'
 Next we'll add our `Button` to the current markup in `App.js`:
 
 ```jsx
-function App() {
+const App = () => {
+
   return (
     <div>
       <Button />
@@ -151,7 +174,8 @@ At this point, we should have a beautiful button displayed on our page. What if 
 Add the following to the `App.js`:
 
 ```jsx
-function App() {
+const App = () => {
+  
   return (
     <div>
       <Button />
