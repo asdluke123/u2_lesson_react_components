@@ -72,7 +72,7 @@ Now that we've talked about different kinds of components, it's time to actually
 
 Throughtout this course, we'll be using function based components. Lets start with a basic skeleton of what a function based component would look like:
 
-![component-structure](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/component-structure.png)
+![component-structure](images/component-structure.png)
 
 In your code editor, let's create a folder called `components` inside of the `src` folder. **All of the code you write will always go in the `src` folder.**
 
@@ -85,7 +85,7 @@ Inside of the `components` folder, create a file called `Button.js`.
 
 The `import` syntax uses the following structure:
 
-![import-structure](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/import-structure.png)
+![import-structure](images/import-structure.png)
 
 **Note: This syntax is only used for component files or libraries such as `React`. When importing stylesheets you do not need a variable name**.
 
@@ -111,9 +111,8 @@ export default Button
 
 Final `Button` component:
 
-<div>
-    <img src='https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-component.png' style="height:260px;"alt="button-component"/>
-</div>
+![import-structure](images/button-component.png)
+
 
 ### Utilizing Our Component
 
@@ -143,7 +142,7 @@ function App() {
 
 At this point, check your browser and you should see the following button:
 
-![button-element](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/button-element.png)
+![button-element](images/button-element.png)
 
 ### Reusing Components
 
@@ -166,7 +165,7 @@ function App() {
 
 We should now see `4` buttons on our page:
 
-![multiple-buttons](https://sei-r.s3.amazonaws.com/u2_lesson_react_components/multiple-buttons.png)
+![multiple-buttons](images/multiple-buttons.png)
 
 ## Recap
 
